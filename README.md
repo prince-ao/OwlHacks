@@ -1,5 +1,5 @@
 ![logo](./frontend/app/favicon.ico)
- # <div align=”center”>Bookstack.ai</div>
+<h1 align="center">Bun</h1>
 
 ## Table of Contents
 - [Introduction](#introduction)

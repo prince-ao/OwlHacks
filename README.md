@@ -1,4 +1,4 @@
-[logo](./frontend/app/favicon.ico)
+![logo](./frontend/app/favicon.ico)
 # <center>Bookstack.ai</center>
 
 ## Table of Contents

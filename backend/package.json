@@ -1,19 +1,15 @@
 {
   "name": "backend",
-  "module": "index.ts",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "bun --hot run src/index.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@elysiajs/eden": "^0.7.2",
-    "elysia": "^0.7.12",
-    "mongoose": "^7.5.2"
+    "express": "^4.18.2"
   }
 }

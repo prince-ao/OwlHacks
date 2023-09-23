@@ -1,4 +1,6 @@
-<h1 align="center">![logo](./frontend/app/favicon.ico)</h1>
+<p align="center">
+  <img src="frontend/app/favicon.ico" width="400" alt="bookstack.ai logo">
+</p>
 <h1 align="center">Bookstack.ai</h1>
 
 ## Table of Contents

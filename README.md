@@ -9,18 +9,20 @@
 - [Contributing](#contributing)
 
 ## Introduction
-The AI-Enhanced Reading Companion is a web application designed to revolutionize the reading experience. By integrating AI, this platform assists users in reading books, quizzes them on the content, and offers enhanced accessibility features for a seamless reading experience. Additionally, it promotes interactive learning to deepen comprehension and engagement with the material.
+Bookstack.ai is a web application designed to revolutionize the reading experience. By integrating AI, this platform assists users in reading books, quizzes them on the content, and offers enhanced accessibility features for a seamless reading experience. Additionally, it promotes interactive learning to deepen comprehension and engagement with the material, while providing an accessible enviroment for users with dyslexia.
 
 ## Features
-AI-Assisted Reading: Utilizes AI algorithms to assist users in reading books, improving comprehension and speed.
+AI-Assisted Reading: Utilizes AI algorithms to assist users in reading selected content, and improving comprehension.
 
 Book Quizzing: Generates quizzes based on the content of the books, reinforcing comprehension and knowledge retention.
 
 Accessibility Features:
 
 Text-to-Speech: Converts written text into spoken words, aiding users with visual impairments or learning disabilities.
+
 Font and Theme Customization: Allows users to adjust font styles, sizes, and themes for optimal readability and comfort.
-Interactive Learning:
+
+Interactive Learning: Providing readers an interactive reading enviroment which quizzes user on how well they understood the topic.
 
 Interactive Summaries: Provides interactive summaries and annotations to enhance understanding and engagement with the material.
 Progress Tracking: Monitors users' progress and suggests personalized reading goals to encourage consistent learning.

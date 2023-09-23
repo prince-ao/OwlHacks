@@ -7,6 +7,7 @@ export default function Home() {
     <main className="">
       <Header />
       <Body />
+      <a href="/api/auth/login">Login</a>
       <Footer />
     </main>
   );

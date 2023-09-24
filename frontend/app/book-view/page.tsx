@@ -230,7 +230,16 @@ export default function BookView() {
                   </RadioGroup>
                 </>
               ) : (
-                <p>Great Job!</p>
+                <div>
+                  <p>Good Job!</p>
+                  <video
+                    autoPlay
+                    loop
+                    style={{ width: "500px", height: "500px" }}
+                  >
+                    <source src="/mp4.webm" />
+                  </video>
+                </div>
               )}
             </PopoverContent>
           </Popover>

@@ -12,7 +12,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Cog, Check, ChevronsUpDown } from "lucide-react";
+import { Cog, Check, ChevronsUpDown, Library } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import {
   Command,
@@ -29,6 +29,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 // import { pdfjs, Document, Page } from 'react-pdf';
 // import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -79,6 +83,9 @@ export default function BookView() {
   const [value, setValue] = useState("playfair");
   const [valueClass, setValueClass] = useState(playfair.className);
   const [lineSpace, setLineSpace] = useState(1.5);
+  const [aiOutput, setAiOutput] = useState("");
+  const [quizState, setQuizState] = useState(0);
+  const [yetAnotherState, setYetAnotherState] = useState(false);
 
   const router = useRouter();
 
@@ -146,7 +153,89 @@ export default function BookView() {
         <h1 className="text-black ms-[40%] font-bold text-xl">
           Compilers: Principles, Techniques, & Tools
         </h1>
-        <div className="ms-[30%] flex gap-8">
+        <div className="ms-[15%] flex gap-8">
+          <Popover>
+            <PopoverTrigger>
+              <Button variant="outline" size="icon">
+                <Library className="h-[1.2rem] w-[1.2rem]" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent>
+              {quizState === 0 ? (
+                <>
+                  <p className="mb-2">Start Chapter:</p>
+                  <Input type="number" min={1} value={1} className="mb-8" />
+                  <p className="mb-2">End Chapter:</p>
+                  <Input type="number" min={1} value={1} />
+                  <Button className="mt-8" onClick={() => setQuizState(1)}>
+                    Begin
+                  </Button>
+                </>
+              ) : quizState === 1 ? (
+                <>
+                  <p>Which of the following is not a phase of a compiler?</p>
+                  <RadioGroup
+                    defaultValue="option-one"
+                    className="mb-8 mt-4 flex flex-col"
+                  >
+                    <div>
+                      <RadioGroupItem
+                        value="option-one"
+                        id="option-one"
+                        className="inline-block"
+                      />
+                      <Label htmlFor="option-one" className="ms-2">
+                        Lexical Analysis
+                      </Label>
+                    </div>
+                    <div>
+                      <RadioGroupItem value="option-two" id="option-two" />
+                      <Label htmlFor="option-two" className="ms-2">
+                        Syntax Analysis
+                      </Label>
+                    </div>
+                    <div>
+                      <RadioGroupItem value="option-three" id="option-three" />
+                      <Label htmlFor="option-three" className="ms-2">
+                        Semantic Analysis
+                      </Label>
+                    </div>
+                    <div>
+                      <RadioGroupItem value="option-four" id="option-four" />
+                      <Label htmlFor="option-their" className="ms-2">
+                        Debugging
+                      </Label>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                      <Button
+                        className="mt-8"
+                        variant="outline"
+                        onClick={() => setQuizState(2)}
+                      >
+                        Next
+                      </Button>
+                      <Button
+                        className="mt-8"
+                        onClick={() => {
+                          setYetAnotherState(true);
+                          setTimeout(() => {
+                            setYetAnotherState(false);
+                          }, 2000);
+                        }}
+                      >
+                        Check
+                      </Button>
+                      {yetAnotherState ? <Check className="" /> : <></>}
+                    </div>
+                  </RadioGroup>
+                </>
+              ) : (
+                <p>Great Job!</p>
+              )}
+            </PopoverContent>
+          </Popover>
+        </div>
+        <div className="ms-8 flex gap-8">
           <Popover>
             <PopoverTrigger>
               <Button variant="outline" size="icon">
@@ -229,37 +318,40 @@ export default function BookView() {
         style={{ fontSize: fontSize, lineHeight: lineSpace }}
         className={
           valueClass +
-          " text-black text-center align-middle pt-[5%] min-h-[0vh]"
+          " text-black text-center align-middle pt-[5%] min-h-[90vh]"
         }
         onMouseUp={async (e) => {
           const text = getSelectedText();
           if (text != "") {
             setIsOpen(true);
-            //   const response = await fetch(
-            //     `https://api.openai.com/v1/chat/completions`,
-            //     {
-            //       method: "POST",
-            //       headers: {
-            //         "Content-Type": "application/json",
-            //         Authorization: `Bearer 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`,
-            //       },
-            //       body: JSON.stringify({
-            //         model: "gpt-3.5-turbo",
-            //         messages: [
-            //           {
-            //             role: "system",
-            //             content:
-            //               "I am currently reading  Compilers: Principles, Techniques, & Tools. Your task is to help with sections in the book. Try to interpret what I send in the best way possible.",
-            //           },
-            //           {
-            //             role: "user",
-            //             content: text,
-            //           },
-            //         ],
-            //       }),
-            //     }
-            //   );
-            //   console.log(await response.text());
+            const response = await fetch(
+              `https://api.openai.com/v1/chat/completions`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer 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`,
+                },
+                body: JSON.stringify({
+                  model: "gpt-3.5-turbo",
+                  messages: [
+                    {
+                      role: "system",
+                      content:
+                        "I am currently reading  Compilers: Principles, Techniques, & Tools. Your task is to help with sections in the book. Try to interpret what I send in the best way possible.",
+                    },
+                    {
+                      role: "user",
+                      content: text,
+                    },
+                  ],
+                }),
+              }
+            );
+            const responseJson = await response.json();
+            console.log(responseJson);
+
+            setAiOutput(responseJson.choices[0].message.content);
           }
         }}
         onSelect={(e) => console.log(window.getSelection())}
@@ -270,9 +362,30 @@ export default function BookView() {
           <CardHeader>
             <CardTitle>Bookstack.ai</CardTitle>
           </CardHeader>
-          <CardContent></CardContent>
+          <CardContent>
+            {aiOutput === "" ? (
+              <div>
+                <Image
+                  alt="loading"
+                  src="/loading.gif"
+                  width={50}
+                  height={50}
+                />
+              </div>
+            ) : (
+              <p>{aiOutput}</p>
+            )}
+          </CardContent>
           <CardFooter className="flex justify-between">
-            <Button variant="outline">Close</Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setIsOpen(false);
+                setAiOutput("");
+              }}
+            >
+              Close
+            </Button>
           </CardFooter>
         </Card>
       )}

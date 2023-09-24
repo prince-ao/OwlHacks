@@ -17,7 +17,7 @@ export default function LeftSide({
   };
 
   return (
-    <div className="flex flex-col items-center mt-16">
+    <div className="flex flex-col items-center my-7 ">
         <SearchBar onSearch={handleSearch} />
       <div
         className="hover:bg-blue-600 hover:cursor-pointer h-[75px] items-center w-[100%] flex justify-left ml-[10px]"

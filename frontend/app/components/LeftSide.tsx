@@ -1,3 +1,5 @@
+// Import the SearchBar component
+import SearchBar from './SearchBar';
 import { Dispatch, SetStateAction } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -8,8 +10,15 @@ export default function LeftSide({
   setShelfName: Dispatch<SetStateAction<string>>;
 }) {
   const { theme } = useTheme();
+
+  // Handle search function
+  const handleSearch = (searchTerm: string) => {
+    // Handle the search here
+  };
+
   return (
-    <div className="flex flex-col items-center mt-16">
+    <div className="flex flex-col items-center my-7 ">
+        <SearchBar onSearch={handleSearch} />
       <div
         className="hover:bg-blue-600 hover:cursor-pointer h-[75px] items-center w-[100%] flex justify-left ml-[10px]"
         onClick={() => setShelfName("Computer Science")}
@@ -56,7 +65,7 @@ export default function LeftSide({
         <Image
           width={30}
           height={30}
-          className="flex items-center justify-center h-[30px] w-[30px]"
+          className="flex items-center justify-center h-[35px] w-[35px]"
           src={theme === "light" ? "/biology.png" : "/biologywhite.png"}
           alt="Biology"
         />

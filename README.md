@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="frontend/app/favicon.ico" width="100" alt="bookstack.ai logo">
+  <img src="https://owlhacks.s3.us-east-2.amazonaws.com/pdfs/computer-science/bookstack.png" width="100" alt="bookstack.ai logo">
 </p>
 <h1 align="center">Bookstack.ai</h1>
 
@@ -29,6 +29,13 @@ Interactive Learning: Providing readers an interactive reading enviroment which 
 
 Interactive Summaries: Provides interactive summaries and annotations to enhance understanding and engagement with the material.
 Progress Tracking: Monitors users' progress and suggests personalized reading goals to encourage consistent learning.
+
+Caching
+Authentication
+This project uses [Auth0](https://auth0.com/) for secure and reliable user authentication. Auth0 provides a universal authentication & authorization platform for web, mobile and legacy applications.
+
+Caching
+For caching and session management, we use [Redis Cloud](https://redislabs.com/redis-enterprise-cloud/overview/). Redis Cloud is a fully-managed cloud service for hosting and running your Redis dataset in a highly-available and scalable manner, with predictable and stable top performance.
 
 ## Installation
 Clone this repository to your local machine.

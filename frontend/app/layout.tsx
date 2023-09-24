@@ -25,11 +25,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <UserProvider>
+            <body>{children}</body>
+          </UserProvider>
         </ThemeProvider>
-        <UserProvider>
-          <body>{children}</body>
-        </UserProvider>
+        
       </body>
     </html>
   );

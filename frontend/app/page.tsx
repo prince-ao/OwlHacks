@@ -1,8 +1,16 @@
 "use client"
 import { useRouter } from 'next/navigation'
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Home() {
-    const router = useRouter()
+    const router = useRouter();
+    const { user, error, isLoading } = useUser();
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>(error.message)</div>;
+
+    //Need to redirect the Sign up page to the Homepage
+
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-[#401654]">
         <header className="text-center mb-4">

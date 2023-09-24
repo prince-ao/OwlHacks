@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="frontend/app/favicon.ico" width="100" alt="bookstack.ai logo">
+  <img src="https://owlhacks.s3.us-east-2.amazonaws.com/pdfs/computer-science/bookstack.png" width="100" alt="bookstack.ai logo">
 </p>
 <h1 align="center">Bookstack.ai</h1>
 

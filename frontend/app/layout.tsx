@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -27,11 +26,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <UserProvider>
-            <body>{children}</body>
-          </UserProvider>
+          {children}
         </ThemeProvider>
-        
       </body>
     </html>
   );

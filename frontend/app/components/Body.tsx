@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import LeftSide from "./LeftSide";
 import Shelf from "./Shelf";
 
 export default function Body() {
-  const [shelfName, setShelfName] = useState("");
+  const [shelfName, setShelfName] = useState("Computer Science");
 
   return (
     <div className="flex">

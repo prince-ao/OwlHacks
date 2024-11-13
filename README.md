@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="bookstacksAI-logo.jpg" width="100" alt="bookstacks.ai logo">
+  <img src="frontend/public/bookstack.png" width="100" alt="bookstacks.ai logo">
 </p>
 <h1 align="center">Bookstacks.ai</h1>
 
 ## Table of Contents
-- [Demo](#demo)
+- [Demo Video](#demo)
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
@@ -12,10 +12,10 @@
 - [Accessibility Features](#accessibility-features)
 - [Contributing](#contributing)
 
-## Demo
+## Demo Video
 <div align="center">
   <a href="https://www.youtube.com/watch?v=4MEn7zRQkTU">
-    <img src="https://img.youtube.com/vi/4MEn7zRQkTU/0.jpg" alt="Bookstacks AI Demo" width="600">
+    <img src="frontend/public/books/Bookstacks-demo.png" alt="Bookstacks AI Demo" width="600">
   </a>
 </div>
 

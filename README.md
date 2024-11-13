@@ -8,7 +8,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Accessibility Features](#accessibility)
+- [Accessibility Features](#accessibility-features)
 - [Contributing](#contributing)
 
 ## Introduction

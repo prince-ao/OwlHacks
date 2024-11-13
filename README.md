@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="bookstacksAI-logo.jpg" width="100" alt="bookstack.ai logo">
+  <img src="bookstacksAI-logo.jpg" width="100" alt="bookstacks.ai logo">
 </p>
-<h1 align="center">Bookstack.ai</h1>
+<h1 align="center">Bookstacks.ai</h1>
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,7 +12,7 @@
 - [Contributing](#contributing)
 
 ## Introduction
-Bookstack.ai is a web application designed to revolutionize the reading experience. By integrating AI, this platform assists users in reading books, quizzes them on the content, and offers enhanced accessibility features for a seamless reading experience. Additionally, it promotes interactive learning to deepen comprehension and engagement with the material, while providing an accessible enviroment for users with dyslexia.
+Bookstacks.ai is a web application designed to revolutionize the reading experience. By integrating AI, this platform assists users in reading books, quizzes them on the content, and offers enhanced accessibility features for a seamless reading experience. Additionally, it promotes interactive learning to deepen comprehension and engagement with the material, while providing an accessible enviroment for users with dyslexia.
 
 ## Features
 AI-Assisted Reading: Utilizes AI algorithms to assist users in reading selected content, and improving comprehension.

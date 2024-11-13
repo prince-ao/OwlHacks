@@ -4,7 +4,7 @@
 <h1 align="center">Bookstacks.ai</h1>
 
 ## Table of Contents
-- [Demo Video](#demo)
+- [Demo Video](#demo-video)
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)

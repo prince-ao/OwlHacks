@@ -4,12 +4,22 @@
 <h1 align="center">Bookstacks.ai</h1>
 
 ## Table of Contents
+- [Demo](#demo)
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Accessibility Features](#accessibility-features)
 - [Contributing](#contributing)
+
+## Demo
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=4MEn7zRQkTU">
+    <img src="https://img.youtube.com/vi/4MEn7zRQkTU/0.jpg" alt="Bookstacks AI Demo" width="600">
+  </a>
+</div>
+
+
 
 ## Introduction
 Bookstacks.ai is a web application designed to revolutionize the reading experience. By integrating AI, this platform assists users in reading books, quizzes them on the content, and offers enhanced accessibility features for a seamless reading experience. Additionally, it promotes interactive learning to deepen comprehension and engagement with the material, while providing an accessible enviroment for users with dyslexia.

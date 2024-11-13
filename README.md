@@ -53,7 +53,7 @@ Begin reading and utilize the AI-enhanced features for an improved reading exper
 Engage with quizzes and interactive learning features to reinforce your understanding.
 For more detailed usage instructions, refer to User Guide.
 
-## Accessibility
+## Accessibility Features
 The AI-Enhanced Reading Companion is committed to providing an accessible reading experience for all users. The following accessibility features are available:
 
 Text-to-Speech: Enables auditory representation of the text for visually impaired users.
